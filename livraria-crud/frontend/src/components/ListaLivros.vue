@@ -2,7 +2,7 @@
   <div>
     <h2>Cadastro de Livro</h2>
     <form @submit.prevent="salvarLivro">
-      <input v-model="form.titulo" placeholder="Titulo" required />
+      <input v-model="form.titulo" placeholder="Título" required />
       <input v-model="form.autor" placeholder="Autor" required />
       <input v-model.number="form.preco" type="number" placeholder="Preco" required step="0.01" />
       <button type="submit">{{ editando ? 'Atualizar' : 'Salvar' }}</button>
@@ -15,10 +15,10 @@
     <table>
       <thead>
         <tr>
-          <th>Titulo</th>
+          <th>Título</th>
           <th>Autor</th>
-          <th>Preco</th>
-          <th>Acoes</th>
+          <th>Preço</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
