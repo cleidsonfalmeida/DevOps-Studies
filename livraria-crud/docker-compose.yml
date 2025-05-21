@@ -21,8 +21,6 @@ services:
       - db
     environment:
       DATABASE_URL: postgresql://user:password@db:5432/livraria
-    ports:
-      - "8000:8000"
     networks:
       - livraria-net
 
