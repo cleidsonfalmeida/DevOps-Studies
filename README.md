@@ -24,7 +24,7 @@ Esta aplicação simula uma livraria virtual com funcionalidades de cadastro, ed
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/livraria-docker.git
+git clone https://github.com/cleidsonfalmeida/DevOps-Studies.git
 cd livraria-docker
 ```
 
@@ -85,7 +85,7 @@ Cada contêiner comunica-se via nome de serviço definido no Docker Compose (ex:
 
 ## Licença
 
-Este projeto é apenas para fins acadêmicos.
+Este projeto possui licença GNU GENERAL PUBLIC LICENSE.
 
 ---
 
