@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from . import models, database, crud, schemas
 
+from . import seed
+
 app = FastAPI()
 
 # CORS: permitir frontend se comunicar com backend
@@ -17,6 +19,10 @@ app.add_middleware(
 
 
 models.Base.metadata.create_all(bind=database.engine)
+
+@app.on_event("startup")
+def init():
+    seed.popular_dados()
 
 def get_db():
     db = database.SessionLocal()
