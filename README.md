@@ -4,8 +4,8 @@ Este repositório contém dois projetos desenvolvidos para a disciplina de DevOp
 
 #### Estrutura do Repositório
 
-- **trabalho1-pratica-devops/**  
+- **Pratica-DevOps/**  
   Projeto referente ao Trabalho 1, focado em práticas DevOps tradicionais.
 
-- **trabalho2-pratica-devops-kubernetes/**  
+- **Pratica-DevOps-Kubernetes/**  
   Projeto referente ao Trabalho 2, com ênfase em orquestração de containers utilizando Kubernetes, deployment, escalabilidade e gerenciamento de aplicações em clusters.
