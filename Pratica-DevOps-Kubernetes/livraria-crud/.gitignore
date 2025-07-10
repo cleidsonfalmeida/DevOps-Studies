@@ -1,0 +1,48 @@
+# ========================
+# BACKEND (FastAPI/Python)
+# ========================
+
+# Byte-compiled / optimized / DLL files
+livraria-crud/backend/__pycache__/
+livraria-crud/backend/*.py[cod]
+livraria-crud/backend/*$py.class
+
+# Virtual environments
+livraria-crud/backend/venv/
+livraria-crud/backend/.env
+livraria-crud/backend/.env.*
+
+# Python packaging
+livraria-crud/backend/*.egg-info/
+livraria-crud/backend/build/
+livraria-crud/backend/dist/
+
+# Pytest
+livraria-crud/backend/.pytest_cache/
+livraria-crud/backend/.cache/
+
+# Docker logs
+livraria-crud/backend/*.log
+
+# ========================
+# GERAL
+# ========================
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Node modules at root (se algum script Node existir fora do frontend)
+node_modules/
+
+# Docker Compose override file (caso crie versões locais)
+docker-compose.override.yml

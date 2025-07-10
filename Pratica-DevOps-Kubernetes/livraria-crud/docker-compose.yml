@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres:15
+    container_name: db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: livraria
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - livraria-net
+
+  backend:
+    build: ./backend
+    container_name: backend
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://user:password@db:5432/livraria
+    networks:
+      - livraria-net
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    networks:
+      - livraria-net
+
+volumes:
+  postgres_data:
+
+networks:
+  livraria-net:
