@@ -2,7 +2,49 @@
 
 ## Visão Geral da Aplicação
 
-Esta aplicação simula uma livraria virtual com funcionalidades de cadastro, edição, listagem e exclusão de livros. Foi desenvolvida com três componentes principais: frontend em Vue.js, backend em FastAPI, e banco de dados PostgreSQL. A aplicação está pronta para rodar no ambiente kubernetes.
+Esta aplicação simula uma livraria virtual, permitindo o cadastro, edição, listagem e exclusão de livros. O sistema é composto por três componentes principais:
+
+- **Frontend:** Desenvolvido em Vue.js
+- **Backend:** Desenvolvido em FastAPI
+- **Banco de Dados:** PostgreSQL
+
+A arquitetura foi preparada para rodar em um `cluster Kubernetes`, utilizando `Helm Charts` para facilitar o deploy, a configuração e o gerenciamento dos recursos.
+
+---
+
+## Como Executar a Aplicação Localmente com Minikube e Helm
+
+1. **Inicie o Minikube:**
+   ```sh
+   minikube start
+   ```
+
+2. **Aplique o Helm Chart:**
+    - No diretório raiz do projeto, execute:
+    ```sh
+    helm install livraria charts/livraria
+    ```
+
+3. **Verifique se os pods e ingress estão rodando:**
+    ```sh
+    kubectl get pods
+    kubectl get ingress
+    ```
+
+4. **Adicione o domínio k8s.local ao seu arquivo /etc/hosts: Descubra o IP do Minikube:**
+    ```sh
+    minikube ip
+    ```
+    - Adicione a seguinte linha ao seu `/etc/hosts` (substitua `<IP-DO-MINIKUBE>` pelo IP retornado acima):
+    - `<IP-DO-MINIKUBE>` k8s.local
+
+5. **Acesse a aplicação no navegador: Abra [http://k8s.local](http://k8s.local) para acessar o frontend da livraria virtual.**
+
+
+6. **acessar o frontend diretamente usando o Minikube:**
+    ```sh
+    minikube service frontend
+    ```
 
 ## Explicação Detalhada dos Arquivos Kubernetes/Helm
 
