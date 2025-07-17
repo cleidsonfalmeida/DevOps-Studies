@@ -6,7 +6,14 @@ db:
 
 backend:
   image: cleidsonfalmeida/livraria-backend:latest
+  replicaCount: 3
 
 
 frontend:
   image: cleidsonfalmeida/livraria-frontend:latest
+  replicaCount: 3
+
+
+ingress:
+  enabled: true
+  host: k8s.local
